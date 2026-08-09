@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
   
   <!-- Primary SEO Meta Tags -->
   <title>Balaji Enterprises Electrical & Sanitary | Wholesaler in Hafeezpet, Hyderabad</title>
   <meta name="title" content="Balaji Enterprises Electrical & Sanitary | Wholesaler in Hafeezpet, Hyderabad">
-  <meta name="description" content="Premier electrical and sanitary wholesaler in Prem Nagar, Hafeezpet, Hyderabad. Quality electrical goods, sanitary fittings, taps, geysers, and switches for contractors and homeowners.">
-  <meta name="keywords" content="Balaji Enterprises Hafeezpet, Electrical shop Hyderabad, Sanitary wholesaler Prem Nagar, Electrical goods Kondapur, Jaquar, V-Guard, Sanitaryware wholesale Hyderabad">
+  <meta name="description" content="Premier electrical and sanitary wholesaler in Prem Nagar, Hafeezpet, Hyderabad. Quality electrical goods, sanitary fittings, taps, geysers, and switches.">
+  <meta name="keywords" content="Balaji Enterprises Hafeezpet, Electrical shop Hyderabad, Sanitary wholesaler Prem Nagar, Electrical goods Kondapur, Jaquar, V-Guard">
   <meta name="author" content="SPDigitalJourney">
   <meta name="geo.region" content="IN-TG">
   <meta name="geo.placename" content="Hyderabad, Hafeezpet">
@@ -22,7 +22,7 @@
   <meta property="og:description" content="One-stop wholesale shop for electrical goods and sanitary fittings in Hafeezpet, Hyderabad. Call 097038 21985 for bulk rates.">
   <meta property="og:image" content="https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=1200&q=80">
 
-  <!-- Google Maps / GEO JSON-LD Schema for AI Search & Google Maps Discovery -->
+  <!-- Schema.org Structured Data -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -48,15 +48,7 @@
     },
     "openingHoursSpecification": {
       "@type": "OpeningHoursSpecification",
-      "dayOfWeek": [
-        "Monday",
-        "Tuesday",
-        "Wednesday",
-        "Thursday",
-        "Friday",
-        "Saturday",
-        "Sunday"
-      ],
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
       "opens": "09:00",
       "closes": "21:00"
     },
@@ -68,7 +60,7 @@
   }
   </script>
 
-  <!-- Google Fonts & Icons -->
+  <!-- Google Fonts & Font Awesome -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -80,12 +72,14 @@
       --primary-dark: #003d99;
       --secondary: #00b8d9;
       --accent: #ffab00;
+      --whatsapp: #25d366;
+      --whatsapp-dark: #1da851;
       --dark: #091e42;
       --light: #f4f5f7;
       --white: #ffffff;
       --gray: #6b778c;
       --border-radius: 12px;
-      --shadow: 0 10px 30px rgba(9, 30, 66, 0.08);
+      --shadow: 0 8px 24px rgba(9, 30, 66, 0.08);
     }
 
     * {
@@ -93,27 +87,30 @@
       margin: 0;
       padding: 0;
       font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
     }
 
     body {
       background-color: #fafbfc;
       color: var(--dark);
-      line-height: 1.6;
+      line-height: 1.5;
+      padding-bottom: 70px; /* Space for Mobile Sticky Funnel Bar */
     }
 
+    /* Navigation Header */
     header {
-      background: rgba(255, 255, 255, 0.95);
+      background: rgba(255, 255, 255, 0.98);
       backdrop-filter: blur(10px);
       position: sticky;
       top: 0;
       z-index: 1000;
       border-bottom: 1px solid #ebecf0;
+      padding: 0.8rem 1rem;
     }
 
     .nav-container {
       max-width: 1200px;
       margin: 0 auto;
-      padding: 1rem 1.5rem;
       display: flex;
       justify-content: space-between;
       align-items: center;
@@ -121,12 +118,12 @@
 
     .logo {
       font-weight: 800;
-      font-size: 1.35rem;
+      font-size: 1.15rem;
       color: var(--primary);
       text-decoration: none;
       display: flex;
       align-items: center;
-      gap: 10px;
+      gap: 8px;
     }
 
     .logo i {
@@ -135,7 +132,7 @@
 
     .nav-links {
       display: flex;
-      gap: 1.5rem;
+      gap: 1.2rem;
       align-items: center;
     }
 
@@ -143,339 +140,410 @@
       text-decoration: none;
       color: var(--dark);
       font-weight: 600;
-      font-size: 0.95rem;
-      transition: color 0.2s;
+      font-size: 0.9rem;
     }
 
-    .nav-links a:hover {
-      color: var(--primary);
-    }
-
+    /* Dynamic Buttons */
     .btn {
-      padding: 0.65rem 1.3rem;
+      padding: 0.75rem 1.2rem;
       border-radius: 8px;
       font-weight: 700;
       text-decoration: none;
       display: inline-flex;
       align-items: center;
+      justify-content: center;
       gap: 8px;
       transition: all 0.2s ease;
       cursor: pointer;
       border: none;
       font-size: 0.95rem;
+      width: 100%;
     }
 
-    .btn-primary {
-      background: var(--primary);
-      color: var(--white);
+    .btn-sm {
+      padding: 0.5rem 0.9rem;
+      font-size: 0.85rem;
+      width: auto;
     }
 
-    .btn-primary:hover {
-      background: var(--primary-dark);
-      transform: translateY(-2px);
-    }
+    .btn-primary { background: var(--primary); color: var(--white); }
+    .btn-primary:active { background: var(--primary-dark); }
+    
+    .btn-secondary { background: #eaeef5; color: var(--dark); }
+    .btn-secondary:active { background: #dfe1e6; }
 
-    .btn-secondary {
-      background: #eaeef5;
-      color: var(--dark);
-    }
+    .btn-whatsapp { background: var(--whatsapp); color: white; }
+    .btn-whatsapp:active { background: var(--whatsapp-dark); }
 
-    .btn-secondary:hover {
-      background: #dfe1e6;
-    }
-
-    .btn-accent {
-      background: #25d366;
-      color: white;
-    }
-
-    .btn-accent:hover {
-      background: #1eb856;
-    }
-
-    /* Hero Section */
+    /* Hero Section (Mobile Optimized) */
     .hero {
-      padding: 4rem 1.5rem;
+      padding: 2rem 1rem;
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: 1.2fr 0.8fr;
-      gap: 3rem;
-      align-items: center;
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
     }
 
     .hero-tag {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
       background: #e6fcff;
       color: #006677;
       font-weight: 700;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
       padding: 0.4rem 0.8rem;
       border-radius: 20px;
-      margin-bottom: 1rem;
       text-transform: uppercase;
       letter-spacing: 0.5px;
+      align-self: flex-start;
     }
 
     .hero h1 {
-      font-size: 2.75rem;
-      line-height: 1.2;
-      margin-bottom: 1.2rem;
+      font-size: 1.85rem;
+      line-height: 1.25;
       font-weight: 800;
+      color: var(--dark);
     }
 
     .hero p {
-      font-size: 1.1rem;
+      font-size: 0.95rem;
       color: var(--gray);
-      margin-bottom: 2rem;
     }
 
-    .hero-cta {
+    .hero-cta-group {
       display: flex;
-      gap: 1rem;
-      flex-wrap: wrap;
+      flex-direction: column;
+      gap: 0.75rem;
+      width: 100%;
     }
 
     .hero-card {
       background: var(--white);
-      padding: 2rem;
+      padding: 1.25rem;
       border-radius: var(--border-radius);
       box-shadow: var(--shadow);
       border: 1px solid #ebecf0;
     }
 
+    .info-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.88rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .info-item i {
+      color: var(--primary);
+      margin-top: 3px;
+    }
+
     /* Ask Maps & Action Hub */
     .maps-hub {
       background: #f4f5f7;
-      padding: 3rem 1.5rem;
+      padding: 2.5rem 1rem;
       border-top: 1px solid #e3e8ee;
       border-bottom: 1px solid #e3e8ee;
     }
 
     .section-title {
       text-align: center;
-      margin-bottom: 2.5rem;
+      margin-bottom: 1.5rem;
     }
 
     .section-title h2 {
-      font-size: 2rem;
+      font-size: 1.5rem;
       font-weight: 800;
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.3rem;
     }
 
     .section-title p {
       color: var(--gray);
+      font-size: 0.88rem;
     }
 
-    .grid-3 {
+    .action-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
       max-width: 1200px;
       margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 1.5rem;
     }
 
     .action-card {
       background: var(--white);
-      padding: 1.8rem;
+      padding: 1.25rem;
       border-radius: var(--border-radius);
       box-shadow: var(--shadow);
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      transition: transform 0.2s;
+      gap: 1rem;
     }
 
-    .action-card:hover {
-      transform: translateY(-4px);
+    .action-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
     }
 
     .action-icon {
-      width: 50px;
-      height: 50px;
-      border-radius: 10px;
+      width: 42px;
+      height: 42px;
+      border-radius: 8px;
       background: #e6f0ff;
       color: var(--primary);
       display: flex;
       align-items: center;
       justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 1rem;
+      font-size: 1.2rem;
+      flex-shrink: 0;
     }
 
     /* AI Inventory Helper */
-    .ai-assistant-section {
+    .ai-section {
       max-width: 1200px;
-      margin: 4rem auto;
-      padding: 0 1.5rem;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
     }
 
     .ai-box {
       background: linear-gradient(135deg, #091e42 0%, #002b66 100%);
       color: white;
       border-radius: var(--border-radius);
-      padding: 2.5rem;
+      padding: 1.5rem;
       box-shadow: var(--shadow);
     }
 
     .ai-header {
       display: flex;
       align-items: center;
-      gap: 12px;
-      margin-bottom: 1.5rem;
+      gap: 10px;
+      margin-bottom: 1rem;
     }
 
     .ai-badge {
       background: var(--accent);
       color: var(--dark);
-      padding: 0.2rem 0.6rem;
+      padding: 0.15rem 0.5rem;
       border-radius: 4px;
       font-weight: 800;
-      font-size: 0.75rem;
+      font-size: 0.7rem;
     }
 
-    .ai-input-group {
+    .ai-input-container {
       display: flex;
-      gap: 10px;
-      margin-bottom: 1rem;
+      flex-direction: column;
+      gap: 0.6rem;
     }
 
-    .ai-input-group input {
-      flex: 1;
-      padding: 0.85rem 1.2rem;
+    .ai-input-container input {
+      padding: 0.8rem 1rem;
       border-radius: 8px;
       border: 1px solid #344563;
       background: rgba(255, 255, 255, 0.1);
       color: white;
-      font-size: 1rem;
-      outline: none;
-    }
-
-    .ai-input-group input::placeholder {
-      color: #97a0af;
-    }
-
-    .ai-response {
-      background: rgba(255, 255, 255, 0.08);
-      border-radius: 8px;
-      padding: 1.2rem;
-      margin-top: 1rem;
-      display: none;
       font-size: 0.95rem;
-      border-left: 4px solid var(--secondary);
+      outline: none;
+      width: 100%;
     }
 
-    .quick-chips {
+    .ai-input-container input::placeholder { color: #97a0af; }
+
+    .ai-chips {
       display: flex;
-      gap: 8px;
-      flex-wrap: wrap;
-      margin-top: 1rem;
+      gap: 6px;
+      overflow-x: auto;
+      padding-bottom: 4px;
+      margin-top: 0.8rem;
+      -webkit-overflow-scrolling: touch;
     }
 
     .chip {
       background: rgba(255, 255, 255, 0.15);
       border: none;
       color: white;
-      padding: 0.4rem 0.8rem;
+      padding: 0.35rem 0.75rem;
       border-radius: 20px;
-      font-size: 0.85rem;
+      font-size: 0.78rem;
+      white-space: nowrap;
       cursor: pointer;
-      transition: background 0.2s;
     }
 
-    .chip:hover {
-      background: rgba(255, 255, 255, 0.3);
+    .ai-response {
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 8px;
+      padding: 1rem;
+      margin-top: 1rem;
+      display: none;
+      font-size: 0.88rem;
+      border-left: 3px solid var(--secondary);
     }
 
-    /* Products Showcase */
+    /* Products Mobile Showcase */
     .products-section {
       max-width: 1200px;
-      margin: 4rem auto;
-      padding: 0 1.5rem;
+      margin: 2.5rem auto;
+      padding: 0 1rem;
     }
 
-    .product-grid {
+    .products-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 1.5rem;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 1rem;
     }
 
     .product-card {
       background: white;
       border-radius: var(--border-radius);
       border: 1px solid #ebecf0;
-      padding: 1.5rem;
-      transition: all 0.2s;
-    }
-
-    .product-card:hover {
-      box-shadow: var(--shadow);
-      border-color: var(--primary);
+      padding: 1.25rem;
     }
 
     .product-tag {
-      font-size: 0.75rem;
+      font-size: 0.7rem;
       font-weight: 700;
       color: var(--primary);
       text-transform: uppercase;
-      margin-bottom: 0.5rem;
     }
 
-    /* Lead Capture Section */
+    /* Lead Capture Form */
     .enquire-section {
       background: #ffffff;
-      padding: 4rem 1.5rem;
+      padding: 2.5rem 1rem;
       border-top: 1px solid #ebecf0;
-      id: enquire;
     }
 
-    .enquire-container {
+    .enquire-card {
       max-width: 800px;
       margin: 0 auto;
       background: #fdfdfd;
       border: 1px solid #dfe1e6;
       border-radius: var(--border-radius);
-      padding: 2.5rem;
+      padding: 1.5rem;
       box-shadow: var(--shadow);
     }
 
     .form-group {
-      margin-bottom: 1.2rem;
+      margin-bottom: 1rem;
     }
 
     .form-group label {
       display: block;
       font-weight: 600;
-      margin-bottom: 0.4rem;
-      font-size: 0.9rem;
+      margin-bottom: 0.3rem;
+      font-size: 0.85rem;
     }
 
     .form-group input, .form-group textarea, .form-group select {
       width: 100%;
-      padding: 0.8rem 1rem;
+      padding: 0.75rem;
       border-radius: 8px;
       border: 1px solid #c1c7d0;
-      font-size: 0.95rem;
+      font-size: 0.9rem;
       outline: none;
+      background: #fff;
     }
 
-    .form-group input:focus, .form-group textarea:focus, .form-group select:focus {
-      border-color: var(--primary);
+    /* Mobile Sticky Bottom WhatsApp Bar */
+    .mobile-sticky-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: #ffffff;
+      box-shadow: 0 -4px 12px rgba(0,0,0,0.1);
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0.5rem 0.75rem;
+      z-index: 9999;
+      border-top: 1px solid #ebecf0;
     }
 
-    .form-row {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 1rem;
+    .mobile-bar-btn {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-decoration: none;
+      color: var(--dark);
+      font-size: 0.7rem;
+      font-weight: 700;
+      gap: 3px;
+      flex: 1;
+    }
+
+    .mobile-bar-btn i {
+      font-size: 1.25rem;
+    }
+
+    .mobile-bar-btn.wa {
+      color: var(--whatsapp);
+    }
+
+    /* WhatsApp Funnel Modal Widget */
+    .wa-modal-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(9, 30, 66, 0.6);
+      backdrop-filter: blur(4px);
+      z-index: 10000;
+      display: none;
+      align-items: flex-end;
+      justify-content: center;
+    }
+
+    .wa-modal {
+      background: white;
+      width: 100%;
+      max-width: 500px;
+      border-top-left-radius: 20px;
+      border-top-right-radius: 20px;
+      padding: 1.5rem;
+      animation: slideUp 0.25s ease-out;
+    }
+
+    @keyframes slideUp {
+      from { transform: translateY(100%); }
+      to { transform: translateY(0); }
+    }
+
+    .wa-option {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.9rem;
+      border: 1px solid #ebecf0;
+      border-radius: 10px;
+      margin-bottom: 0.75rem;
+      text-decoration: none;
+      color: var(--dark);
+      font-weight: 600;
+      font-size: 0.9rem;
+      transition: background 0.2s;
+    }
+
+    .wa-option:active {
+      background: #f4f5f7;
+    }
+
+    .wa-option i {
+      color: var(--whatsapp);
+      font-size: 1.2rem;
     }
 
     /* Footer */
     footer {
       background: var(--dark);
       color: white;
-      padding: 3rem 1.5rem 1.5rem;
+      padding: 2rem 1rem 1.5rem;
       text-align: center;
-      font-size: 0.9rem;
+      font-size: 0.85rem;
     }
 
     footer a {
@@ -483,31 +551,61 @@
       text-decoration: none;
     }
 
-    footer a:hover {
-      text-decoration: underline;
-    }
-
     .credit-badge {
-      margin-top: 2rem;
-      padding-top: 1.5rem;
+      margin-top: 1.5rem;
+      padding-top: 1rem;
       border-top: 1px solid #253858;
       color: #97a0af;
-      font-size: 0.85rem;
+      font-size: 0.8rem;
     }
 
-    @media (max-width: 768px) {
+    /* Tablet and Desktop Styles */
+    @media (min-width: 768px) {
+      body { padding-bottom: 0; }
+      .mobile-sticky-bar { display: none; }
+      
       .hero {
-        grid-template-columns: 1fr;
-        text-align: center;
+        display: grid;
+        grid-template-columns: 1.2fr 0.8fr;
+        padding: 3.5rem 1.5rem;
+        align-items: center;
       }
-      .hero-cta {
-        justify-content: center;
+
+      .hero h1 { font-size: 2.5rem; }
+
+      .hero-cta-group {
+        flex-direction: row;
       }
+
+      .hero-cta-group .btn {
+        width: auto;
+      }
+
+      .action-grid {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+      }
+
+      .ai-input-container {
+        flex-direction: row;
+      }
+
+      .ai-input-container .btn {
+        width: auto;
+      }
+
       .form-row {
-        grid-template-columns: 1fr;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
       }
-      .ai-input-group {
-        flex-direction: column;
+
+      .wa-modal-overlay {
+        align-items: center;
+      }
+
+      .wa-modal {
+        border-radius: 16px;
       }
     }
   </style>
@@ -521,165 +619,154 @@
         <i class="fa-solid fa-bolt-lightning"></i> Balaji Enterprises
       </a>
       <div class="nav-links">
-        <a href="#about">About</a>
-        <a href="#ai-assistant">Ask Inventory</a>
-        <a href="#products">Products</a>
-        <a href="#enquire" class="btn btn-primary">Enquire Now</a>
+        <a href="#enquire" class="btn btn-primary btn-sm">Get Quote</a>
       </div>
     </div>
   </header>
 
-  <!-- Hero Section -->
+  <!-- Mobile-First Hero Section -->
   <section class="hero" id="about">
     <div>
-      <span class="hero-tag"><i class="fa-solid fa-location-dot"></i> Prem Nagar, Hafeezpet, Hyderabad</span>
-      <h1>Premier Electrical & Sanitary Wholesaler</h1>
-      <p>One-stop hub providing high-quality electrical goods, cables, lighting, switches, and premium sanitary fittings. Catering to contractors, retailers, and direct buyers across Hyderabad.</p>
+      <span class="hero-tag"><i class="fa-solid fa-location-dot"></i> Hafeezpet, Hyderabad</span>
+      <h1>Electrical & Sanitary Wholesale Store</h1>
+      <p style="margin: 0.75rem 0 1.25rem;">Premier local wholesale outlet supplying electrical cables, switches, lighting, and sanitary fittings to contractors, builders, and direct buyers.</p>
       
-      <div class="hero-cta">
-        <a href="https://share.google/BuHiLHzJrelsmRY8p" target="_blank" rel="noopener" class="btn btn-primary">
-          <i class="fa-solid fa-map-location-dot"></i> Open in Maps
-        </a>
+      <div class="hero-cta-group">
+        <button class="btn btn-whatsapp" onclick="openWaFunnel()">
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Direct WhatsApp Funnel
+        </button>
         <a href="tel:09703821985" class="btn btn-secondary">
-          <i class="fa-solid fa-phone"></i> 097038 21985
-        </a>
-        <a href="#enquire" class="btn btn-accent">
-          <i class="fa-brands fa-whatsapp"></i> Quick Quote
+          <i class="fa-solid fa-phone"></i> Call 097038 21985
         </a>
       </div>
     </div>
 
     <div class="hero-card">
-      <h3 style="margin-bottom: 1rem; color: var(--primary);">Store Quick Info</h3>
-      <p style="font-size: 0.95rem; margin-bottom: 0.8rem;">
-        <i class="fa-solid fa-building" style="width: 20px; color: var(--gray);"></i> 
-        <strong>Business Type:</strong> Wholesaler & Retailer
-      </p>
-      <p style="font-size: 0.95rem; margin-bottom: 0.8rem;">
-        <i class="fa-solid fa-map-pin" style="width: 20px; color: var(--gray);"></i> 
-        Prem Nagar, Hafeezpet, Hyderabad - 500084
-      </p>
-      <p style="font-size: 0.95rem; margin-bottom: 0.8rem;">
-        <i class="fa-solid fa-clock" style="width: 20px; color: var(--gray);"></i> 
-        <strong>Hours:</strong> Mon - Sun: 9:00 AM - 9:00 PM
-      </p>
-      <p style="font-size: 0.95rem;">
-        <i class="fa-solid fa-truck" style="width: 20px; color: var(--gray);"></i> 
-        Bulk Wholesale Supply Available
-      </p>
+      <h3 style="font-size: 1.1rem; margin-bottom: 0.8rem; color: var(--primary);">Store Highlights</h3>
+      <div class="info-item">
+        <i class="fa-solid fa-store"></i>
+        <span><strong>Balaji Enterprises</strong> Electrical & Sanitary Fittings</span>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-map-pin"></i>
+        <span>Narne Estate Rd, Prem Nagar, Hafeezpet, Hyderabad - 500084</span>
+      </div>
+      <div class="info-item">
+        <i class="fa-solid fa-clock"></i>
+        <span>Open Daily: 9:00 AM – 9:00 PM</span>
+      </div>
     </div>
   </section>
 
-  <!-- Ask Maps & Local Navigation Hub -->
+  <!-- Ask Maps & Local Action Hub -->
   <section class="maps-hub">
     <div class="section-title">
-      <h2>Ask Maps & Spatial Actions</h2>
-      <p>Find us easily in Hafeezpet or share your review on Google Maps</p>
+      <h2>Ask Maps Actions</h2>
+      <p>Quick navigation and Google review triggers</p>
     </div>
 
-    <div class="grid-3">
+    <div class="action-grid">
       <div class="action-card">
-        <div>
+        <div class="action-header">
           <div class="action-icon"><i class="fa-solid fa-route"></i></div>
-          <h3>Get Store Directions</h3>
-          <p style="color: var(--gray); font-size: 0.9rem; margin: 0.5rem 0 1rem;">Located on Narne Estate Rd near Prem Nagar with convenient parking.</p>
+          <div>
+            <h3 style="font-size: 1rem;">Directions</h3>
+            <p style="color: var(--gray); font-size: 0.8rem;">Prem Nagar, Hafeezpet</p>
+          </div>
         </div>
-        <a href="https://share.google/BuHiLHzJrelsmRY8p" target="_blank" rel="noopener" class="btn btn-secondary" style="justify-content: center;">
-          <i class="fa-solid fa-directions"></i> Navigate via Maps
+        <a href="https://share.google/BuHiLHzJrelsmRY8p" target="_blank" rel="noopener" class="btn btn-secondary">
+          <i class="fa-solid fa-map-location-dot"></i> Open Google Maps
         </a>
       </div>
 
       <div class="action-card">
-        <div>
+        <div class="action-header">
           <div class="action-icon"><i class="fa-solid fa-star"></i></div>
-          <h3>Customer Reviews</h3>
-          <p style="color: var(--gray); font-size: 0.9rem; margin: 0.5rem 0 1rem;">Rated top-tier for reliability and competitive wholesale pricing in Hyderabad.</p>
+          <div>
+            <h3 style="font-size: 1rem;">Google Review</h3>
+            <p style="color: var(--gray); font-size: 0.8rem;">Rate our wholesale service</p>
+          </div>
         </div>
-        <a href="https://g.page/r/CRIAwYEA-RW9EBM/review" target="_blank" rel="noopener" class="btn btn-secondary" style="justify-content: center;">
-          <i class="fa-solid fa-pen-to-square"></i> Leave Google Review
+        <a href="https://g.page/r/CRIAwYEA-RW9EBM/review" target="_blank" rel="noopener" class="btn btn-secondary">
+          <i class="fa-solid fa-pen-to-square"></i> Leave 5-Star Review
         </a>
       </div>
 
       <div class="action-card">
-        <div>
-          <div class="action-icon"><i class="fa-solid fa-headset"></i></div>
-          <h3>Direct Call & Enquiries</h3>
-          <p style="color: var(--gray); font-size: 0.9rem; margin: 0.5rem 0 1rem;">Need stock availability or custom quotes immediately? Speak with our team.</p>
+        <div class="action-header">
+          <div class="action-icon"><i class="fa-solid fa-comments"></i></div>
+          <div>
+            <h3 style="font-size: 1rem;">Instant Enquiry</h3>
+            <p style="color: var(--gray); font-size: 0.8rem;">Connect via WhatsApp</p>
+          </div>
         </div>
-        <a href="tel:09703821985" class="btn btn-primary" style="justify-content: center;">
-          <i class="fa-solid fa-phone"></i> Call 097038 21985
-        </a>
+        <button class="btn btn-whatsapp" onclick="openWaFunnel()">
+          <i class="fa-brands fa-whatsapp"></i> Choose Requirement
+        </button>
       </div>
     </div>
   </section>
 
-  <!-- AI Inventory Assistant (Ask AI) -->
-  <section class="ai-assistant-section" id="ai-assistant">
+  <!-- AI Inventory Assistant -->
+  <section class="ai-section" id="ai-assistant">
     <div class="ai-box">
       <div class="ai-header">
-        <i class="fa-solid fa-robot" style="font-size: 1.8rem; color: var(--secondary);"></i>
+        <i class="fa-solid fa-robot" style="font-size: 1.5rem; color: var(--secondary);"></i>
         <div>
-          <h3 style="margin: 0;">AI Inventory Assistant <span class="ai-badge">Ask AI</span></h3>
-          <p style="font-size: 0.85rem; color: #b3d4ff;">Search materials, geysers, faucets, switches, or sanitary items</p>
+          <h3 style="font-size: 1.1rem; margin: 0;">AI Inventory Helper <span class="ai-badge">Ask AI</span></h3>
+          <p style="font-size: 0.78rem; color: #b3d4ff;">Check if we carry the stock you need</p>
         </div>
       </div>
 
-      <div class="ai-input-group">
-        <input type="text" id="aiQuery" placeholder="e.g., Do you sell 25L storage geysers or Jaquar taps?">
-        <button class="btn btn-primary" onclick="handleAiQuery()"><i class="fa-solid fa-paper-plane"></i> Ask AI</button>
+      <div class="ai-input-container">
+        <input type="text" id="aiQuery" placeholder="e.g., Do you have storage geysers or LED lights?">
+        <button class="btn btn-primary" onclick="handleAiQuery()"><i class="fa-solid fa-magnifying-glass"></i> Search</button>
       </div>
 
-      <div class="quick-chips">
-        <button class="chip" onclick="askPreset('Do you carry water heaters and geysers?')">Geysers & Water Heaters</button>
-        <button class="chip" onclick="askPreset('What bathroom faucets and sanitaryware are available?')">Sanitary Fittings & Faucets</button>
-        <button class="chip" onclick="askPreset('Do you supply electrical wiring and switches in bulk?')">Bulk Wires & Switches</button>
-        <button class="chip" onclick="askPreset('Where exactly are you located in Hafeezpet?')">Store Location Info</button>
+      <div class="ai-chips">
+        <button class="chip" onclick="askPreset('Water heaters and geysers')">Water Heaters</button>
+        <button class="chip" onclick="askPreset('Sanitaryware and taps')">Sanitaryware & Taps</button>
+        <button class="chip" onclick="askPreset('Cables wires and switches')">Bulk Wires & Switches</button>
       </div>
 
       <div class="ai-response" id="aiOutput"></div>
     </div>
   </section>
 
-  <!-- Product Categories Showcase -->
-  <section class="products-section" id="products">
+  <!-- Products Showcase -->
+  <section class="products-section">
     <div class="section-title">
-      <h2>Products & Wholesale Inventory</h2>
-      <p>Durable and reliable solutions for residential and commercial construction</p>
+      <h2>Wholesale Categories</h2>
+      <p>Heavy duty & home construction supplies</p>
     </div>
 
-    <div class="product-grid">
+    <div class="products-grid">
       <div class="product-card">
-        <div class="product-tag">Electrical</div>
-        <h3>Ceiling Fans & Exhaust</h3>
-        <p style="color: var(--gray); font-size: 0.9rem; margin-top: 0.5rem;">Energy-efficient ceiling fans, heavy-duty exhaust fans, and wall fans from leading brands.</p>
+        <span class="product-tag">Electrical</span>
+        <h3 style="font-size: 1.1rem; margin: 0.3rem 0;">Fans & Lighting</h3>
+        <p style="color: var(--gray); font-size: 0.85rem;">Ceiling fans, exhaust fans, LED panel spotlights, and designer lighting fittings.</p>
       </div>
 
       <div class="product-card">
-        <div class="product-tag">Sanitaryware</div>
-        <h3>Faucets & Bathroom Fittings</h3>
-        <p style="color: var(--gray); font-size: 0.9rem; margin-top: 0.5rem;">Pillar cocks, wall mixers, divertors, overhead showers, and wash basins.</p>
+        <span class="product-tag">Sanitaryware</span>
+        <h3 style="font-size: 1.1rem; margin: 0.3rem 0;">Faucets & Fittings</h3>
+        <p style="color: var(--gray); font-size: 0.85rem;">Pillar cocks, wall mixers, divertors, stainless sinks, wash basins, and showers.</p>
       </div>
 
       <div class="product-card">
-        <div class="product-tag">Appliances</div>
-        <h3>Water Heaters & Geysers</h3>
-        <p style="color: var(--gray); font-size: 0.9rem; margin-top: 0.5rem;">Storage geysers (15L - 25L), instant heaters, and solar water heating solutions.</p>
-      </div>
-
-      <div class="product-card">
-        <div class="product-tag">Electrical</div>
-        <h3>Voltage Stabilizers & Lighting</h3>
-        <p style="color: var(--gray); font-size: 0.9rem; margin-top: 0.5rem;">Smart TV & AC stabilizers (V-Guard), LED panel lights, COB spotlights, and bulbs.</p>
+        <span class="product-tag">Appliances</span>
+        <h3 style="font-size: 1.1rem; margin: 0.3rem 0;">Water Heaters</h3>
+        <p style="color: var(--gray); font-size: 0.85rem;">Storage geysers (15L/25L), instant heaters, and heavy-duty V-Guard stabilizers.</p>
       </div>
     </div>
   </section>
 
   <!-- Lead Capture Section (#enquire) -->
   <section class="enquire-section" id="enquire">
-    <div class="enquire-container">
-      <div style="text-align: center; margin-bottom: 2rem;">
-        <h2 style="font-size: 1.8rem; font-weight: 800;">Get a Custom Wholesale Quote</h2>
-        <p style="color: var(--gray); font-size: 0.95rem;">Fill out the details below to receive pricing or place an order inquiry directly.</p>
+    <div class="enquire-card">
+      <div style="text-align: center; margin-bottom: 1.25rem;">
+        <h2 style="font-size: 1.4rem; font-weight: 800;">Get Wholesale Quote</h2>
+        <p style="color: var(--gray); font-size: 0.85rem;">Instant submission via WhatsApp</p>
       </div>
 
       <form id="leadForm" onsubmit="submitForm(event)">
@@ -690,44 +777,89 @@
           </div>
           <div class="form-group">
             <label for="phone">Phone Number *</label>
-            <input type="tel" id="phone" required placeholder="0987654321">
+            <input type="tel" id="phone" required placeholder="Mobile Number">
           </div>
         </div>
 
         <div class="form-row">
           <div class="form-group">
-            <label for="category">Requirement Type *</label>
+            <label for="category">Requirement *</label>
             <select id="category" required>
               <option value="Electrical Goods">Electrical Goods</option>
               <option value="Sanitaryware & Fittings">Sanitaryware & Fittings</option>
               <option value="Water Heaters / Geysers">Water Heaters / Geysers</option>
               <option value="Contractor / Bulk Order">Contractor / Bulk Order</option>
-              <option value="General Inquiry">General Inquiry</option>
             </select>
           </div>
           <div class="form-group">
-            <label for="location">Your Location</label>
-            <input type="text" id="location" placeholder="e.g., Hafeezpet, Kondapur, Kukatpally">
+            <label for="location">Your Area</label>
+            <input type="text" id="location" placeholder="e.g., Hafeezpet, Kondapur">
           </div>
         </div>
 
         <div class="form-group">
-          <label for="message">List Your Items or Project Details *</label>
-          <textarea id="message" rows="4" required placeholder="Mention quantity or specific items needed..."></textarea>
+          <label for="message">Material Details *</label>
+          <textarea id="message" rows="3" required placeholder="Mention quantity or specific items..."></textarea>
         </div>
 
-        <button type="submit" class="btn btn-primary" style="width: 100%; justify-content: center; padding: 0.9rem;">
-          <i class="fa-solid fa-paper-plane"></i> Send Requirement via WhatsApp
+        <button type="submit" class="btn btn-whatsapp">
+          <i class="fa-brands fa-whatsapp" style="font-size: 1.2rem;"></i> Send Order to WhatsApp
         </button>
       </form>
     </div>
   </section>
 
+  <!-- Mobile Sticky Bottom WhatsApp Funnel Bar -->
+  <div class="mobile-sticky-bar">
+    <a href="tel:09703821985" class="mobile-bar-btn">
+      <i class="fa-solid fa-phone"></i>
+      <span>Call Store</span>
+    </a>
+    <button onclick="openWaFunnel()" class="mobile-bar-btn wa" style="background: none; border: none; cursor: pointer;">
+      <i class="fa-brands fa-whatsapp"></i>
+      <span>WhatsApp</span>
+    </button>
+    <a href="https://share.google/BuHiLHzJrelsmRY8p" target="_blank" rel="noopener" class="mobile-bar-btn">
+      <i class="fa-solid fa-location-dot"></i>
+      <span>Directions</span>
+    </a>
+  </div>
+
+  <!-- WhatsApp Funnel Popup Modal -->
+  <div class="wa-modal-overlay" id="waModal" onclick="closeWaFunnel(event)">
+    <div class="wa-modal">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem;">
+        <h3 style="font-size: 1.1rem; font-weight: 800;">Choose Inquiry Type</h3>
+        <button onclick="document.getElementById('waModal').style.display='none'" style="background: none; border: none; font-size: 1.2rem; cursor: pointer;"><i class="fa-solid fa-xmark"></i></button>
+      </div>
+
+      <a href="javascript:void(0)" onclick="sendDirectWa('Electrical Wholesale Inquiry')" class="wa-option">
+        <span>⚡ Bulk Electrical Goods & Wires</span>
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+      <a href="javascript:void(0)" onclick="sendDirectWa('Sanitaryware & Taps Price Inquiry')" class="wa-option">
+        <span>🚿 Sanitaryware & Bathroom Fittings</span>
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+      <a href="javascript:void(0)" onclick="sendDirectWa('Geysers & Water Heaters Quote')" class="wa-option">
+        <span>🔥 Water Heaters & Geysers</span>
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+
+      <a href="javascript:void(0)" onclick="sendDirectWa('Contractor / Builder Pricing Request')" class="wa-option">
+        <span>🏗️ Contractor / Bulk Construction Quote</span>
+        <i class="fa-brands fa-whatsapp"></i>
+      </a>
+    </div>
+  </div>
+
   <!-- Footer -->
   <footer>
     <div style="max-width: 1200px; margin: 0 auto;">
-      <h3 style="font-weight: 800; margin-bottom: 0.5rem; color: white;">Balaji Enterprises Electrical & Sanitary</h3>
-      <p style="color: #97a0af;">Prem Nagar, Hafeezpet, Hyderabad, Telangana 500084 | Contact: 097038 21985</p>
+      <h3 style="font-weight: 800; color: white;">Balaji Enterprises Electrical & Sanitary</h3>
+      <p style="color: #97a0af; font-size: 0.8rem; margin-top: 0.3rem;">Prem Nagar, Hafeezpet, Hyderabad, Telangana 500084 | Phone: 097038 21985</p>
       
       <div class="credit-badge">
         Made by <a href="https://spdigitaljourney.github.io/The-Local-Signal/#enquire" target="_blank" rel="noopener">SPDigitalJourney</a>
@@ -735,29 +867,44 @@
     </div>
   </footer>
 
-  <!-- Script for Interactive AI Assistant & Lead Capture -->
+  <!-- Scripts -->
   <script>
-    // Lightweight Client AI Knowledge Base
+    const WA_NUMBER = "919703821985";
+
+    // Open & Close WhatsApp Modal
+    function openWaFunnel() {
+      document.getElementById('waModal').style.display = 'flex';
+    }
+
+    function closeWaFunnel(e) {
+      if (e.target.id === 'waModal') {
+        document.getElementById('waModal').style.display = 'none';
+      }
+    }
+
+    function sendDirectWa(type) {
+      const text = `Hello Balaji Enterprises, I have a query regarding: *${type}*. Please share available catalog and wholesale pricing.`;
+      window.open(`https://wa.me/${WA_NUMBER}?text=${encodeURIComponent(text)}`, '_blank');
+      document.getElementById('waModal').style.display = 'none';
+    }
+
+    // AI Knowledge Base Search
     const inventoryKB = [
       {
-        keywords: ['geyser', 'heater', 'water heater', 'storage geyser', 'hot water'],
-        response: "Yes! We stock premium storage geysers (15L & 25L from Crompton, Orient, Jaquar) and instant water heaters. Contact us at 097038 21985 for bulk pricing."
+        keywords: ['geyser', 'heater', 'water heater', 'storage', 'hot water'],
+        response: "We carry 15L & 25L storage geysers and instant water heaters from Crompton, Orient, and Jaquar."
       },
       {
-        keywords: ['sanitary', 'faucet', 'tap', 'wash basin', 'sink', 'toilet', 'commode', 'shower'],
-        response: "We offer complete sanitary solutions including pillar cocks, wall mixers, gold kitchen sinks, wash basins, and designer bathroom fittings."
+        keywords: ['sanitary', 'faucet', 'tap', 'wash basin', 'sink', 'toilet', 'shower'],
+        response: "Complete sanitary stock available: pillar cocks, wall mixers, showers, and kitchen sinks."
       },
       {
-        keywords: ['fan', 'ceiling fan', 'exhaust', 'usha', 'crompton', 'almonard'],
-        response: "We carry high-efficiency electrical ceiling fans, kitchen exhaust fans, wall fans, and pedestal fans."
+        keywords: ['fan', 'ceiling fan', 'exhaust'],
+        response: "We supply ceiling fans, exhaust fans, and heavy-duty industrial fans."
       },
       {
-        keywords: ['switch', 'wire', 'cable', 'stabilizer', 'v-guard', 'vguard', 'led', 'light'],
-        response: "We supply V-Guard voltage stabilizers, LED panel lights, COB lights, Wipro lighting, and durable copper wiring for residential and commercial projects."
-      },
-      {
-        keywords: ['location', 'address', 'where', 'place', 'prem nagar', 'hafeezpet'],
-        response: "We are located at Narne Estate Rd, Prem Nagar, Hafeezpet, Hyderabad, Telangana 500084 (Near Axis Bank). You can open Google Maps directly using the 'Open in Maps' button above."
+        keywords: ['switch', 'wire', 'cable', 'stabilizer', 'v-guard', 'led', 'light'],
+        response: "In-stock: V-Guard stabilizers, copper cables, modular switches, and LED spotlights."
       }
     ];
 
@@ -767,32 +914,26 @@
 
       if (!input) {
         output.style.display = 'block';
-        output.innerHTML = "Please enter a product or question to ask our inventory system.";
+        output.innerHTML = "Please type a product name to search.";
         return;
       }
 
-      let matchedResponse = null;
-      for (const item of inventoryKB) {
-        if (item.keywords.some(kw => input.includes(kw))) {
-          matchedResponse = item.response;
-          break;
-        }
-      }
-
+      let matched = inventoryKB.find(item => item.keywords.some(kw => input.includes(kw)));
       output.style.display = 'block';
-      if (matchedResponse) {
-        output.innerHTML = `<strong><i class="fa-solid fa-circle-check" style="color: #00875a;"></i> Inventory Status:</strong> ${matchedResponse}`;
+      
+      if (matched) {
+        output.innerHTML = `<strong><i class="fa-solid fa-check" style="color:#25d366;"></i> Available:</strong> ${matched.response}`;
       } else {
-        output.innerHTML = `<strong><i class="fa-solid fa-circle-info" style="color: #ffab00;"></i> Note:</strong> We carry a wide variety of electrical and sanitary items at our Prem Nagar store. Please submit an enquiry below or call 097038 21985 for immediate stock verification!`;
+        output.innerHTML = `<strong><i class="fa-solid fa-circle-info" style="color:#ffab00;"></i> Note:</strong> We carry extensive inventory at our Hafeezpet shop. Tap WhatsApp below to confirm stock!`;
       }
     }
 
-    function askPreset(queryText) {
-      document.getElementById('aiQuery').value = queryText;
+    function askPreset(txt) {
+      document.getElementById('aiQuery').value = txt;
       handleAiQuery();
     }
 
-    // Lead Capture Form Handler (WhatsApp Routing)
+    // Lead Capture Submission
     function submitForm(e) {
       e.preventDefault();
       const name = document.getElementById('name').value;
@@ -801,16 +942,14 @@
       const location = document.getElementById('location').value;
       const message = document.getElementById('message').value;
 
-      const whatsappText = `*New Website Enquiry - Balaji Enterprises*%0A` +
+      const whatsappText = `*New Lead - Balaji Enterprises Website*%0A` +
         `*Name:* ${encodeURIComponent(name)}%0A` +
         `*Phone:* ${encodeURIComponent(phone)}%0A` +
-        `*Requirement:* ${encodeURIComponent(category)}%0A` +
-        `*Location:* ${encodeURIComponent(location || 'N/A')}%0A` +
-        `*Details:* ${encodeURIComponent(message)}`;
+        `*Category:* ${encodeURIComponent(category)}%0A` +
+        `*Location:* ${encodeURIComponent(location || 'Hafeezpet/Hyderabad')}%0A` +
+        `*Items Needed:* ${encodeURIComponent(message)}`;
 
-      // WhatsApp URL target
-      const targetPhone = "919703821985";
-      window.open(`https://wa.me/${targetPhone}?text=${whatsappText}`, '_blank');
+      window.open(`https://wa.me/${WA_NUMBER}?text=${whatsappText}`, '_blank');
     }
   </script>
 </body>
